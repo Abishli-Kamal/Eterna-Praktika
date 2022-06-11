@@ -1,0 +1,187 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <header>
+        <section id="headertop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-flex contact">
+                        <div class="email">
+                            <i class="fa-regular fa-envelope"></i>
+                            <a href="">@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="email").Value</a>
+                        </div>
+                        <div class="tel d-flex mx-3">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <p>@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="phones").Value</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex social-media">
+                        <a href="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Instagram").IconUrl"><i class="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Instagram").Value"></i></a>
+                        <a href="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Facebook").IconUrl"><i class="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Facebook").Value"></i></a>
+                        <a href="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Linkedin").IconUrl"><i class="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Linkedin").Value"></i></a>
+                        <a href="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Twitter").IconUrl"><i class="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Twitter").Value"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="headerbottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="logo ">
+                            <h2>ETERNA</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 navbar">
+                        <ul class="d-flex topnav" id="myTopnav">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Portfolio</a></li>
+                            <li><a href="">Team</a></li>
+                            <li><a href="">Pricing</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li>
+
+                                <div class="dropdown">
+                                    <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown link
+                                    </a>
+
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li><a href="">Contact</a></li>
+
+                        </ul>
+
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="menuIcon">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    @RenderBody()
+
+    <footer>
+        <section id="subscribe">
+            <div class="container">
+                <div class="row subscribeTop">
+                    <div class="description col-lg-6 col-md-12 col-sm-12">
+                        <h4>Our Newsletter</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12  mt-4 input w-50 border border-info rounded-pill">
+                        <input type="text" class="w-75">
+                        <button class="btn btn-danger mb-1 rounded-pill">Subscribe</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="navbarsection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12  navbarfooter">
+                        <h5> USEFUL LINKS</h5>
+                        <ul>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="">Home</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="">About as</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="">Services</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href=""> Terms of service</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href=""> Privacy policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3  col-md-6 col-sm-12 navbarfooter">
+                        <h5>OUR SERVICES</h5>
+                        <ul>
+                            <li class="rounded-circle">
+                                <i class="fa-solid fa-angle-right"></i><a href=""> Web Design</a>
+                            </li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="">Web Development</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href=""> Product Management</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="">Marketing</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href=""> Graphic Design</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3  col-md-6 col-sm-12 navbarfooter">
+                        <h5>CONTACT US</h5>
+                        <ul>
+                            <li>A108 Adam Street</li>
+                            <li>New York, NY 535022</li>
+                            <li>United States</li>
+                        </ul>
+                        <p>@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="phones").Value</p>
+                        <p>@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="email").Value</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12   navbarfooter">
+                        <h5>About Eterna</h5>
+                        <p>
+                            Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
+                            valies darta donna mare fermentum iaculis eu non diam phasellus.
+                        </p>
+                        <ul class=" w-75 d-flex justify-content-around icons">
+                            <div>
+                            <li><a href="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Instagram").IconUrl"><i class="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Instagram").Value"></i></a></li>
+                    </div>
+                    <div>
+                        <li><a href="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Facebook").IconUrl"><i class="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Facebook").Value"></i></a></li>
+
+                    </div>
+                    <div>
+                        <li><a href="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Twitter").IconUrl"><i class="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Twitter").Value"></i></a></li>
+
+                    </div>
+                    <div>
+                        <li><a href="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Linkedin").IconUrl"><i class="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Linkedin").Value"></i></a></li>
+
+                    </div>
+                    <div>
+                        <li><a href="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Skype").IconUrl"><i class="@layoutservis.GetDatas().Result.FirstOrDefault(s=>s.Key=="Skype").Value"></i></a></li>
+                    </div>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="footerend">
+            <div class="container">
+                <div class="row text-center ">
+                    <span>© Copyright Eterna. All Rights Reserved</span>
+                    <span>Designed by <a href=""> BootstrapMade</a></span>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="~/assets/js/script.js"></script>
+</body>
+
+</html>

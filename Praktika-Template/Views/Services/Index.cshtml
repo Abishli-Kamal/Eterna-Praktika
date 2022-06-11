@@ -1,0 +1,123 @@
+﻿@using Praktika_Template.Models
+@using Praktika_Template.ViewModels
+@model ServisVM
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main>
+    <section id="cardsection">
+        <div class="container">
+            <div class="title">
+                <div class="navbartext">
+                    Home / Services
+                </div>
+                <div class="subtitle">
+                    Services
+                </div>
+            </div>
+            <div class="row">
+                @foreach (Cart cart in Model.Carts)
+                {
+                    <div class="col-lg-4 services col-md-6 col-sm-12">
+                        <div class="icon">
+                            <i class="@cart.Icon"></i>
+                        </div>
+                        <h2>@cart.Name</h2>
+                        <p>@cart.Infos</p>
+                    </div>
+                }
+
+
+
+            </div>
+        </div>
+    </section>
+    <section id="aboutsectionend">
+        <div class="container">
+            <div class="row">
+
+                <div class="skills">
+                    <h3>@Model.Skills.Name
+                        <div class="box d-flex justify-content-center">
+                            <hr>
+                        </div>
+                    </h3>
+
+                </div>
+                <p>
+                   @Model.Skills.Description
+                </p>
+            </div>
+            <div class="design d-flex ">
+                <div class="img col-lg-6 w-50 col-md-12 col-sm-12">
+                    <img style="width: 90%;" src="assets/img/@Model.Skills.Image" alt="">
+                </div>
+                <div class="statistics col-lg-6 col-md-12 col-sm-12 ">
+                    <div class="info col-sm-12">
+                        <h3>@Model.Skills.StatisticaTitle</h3>
+                        <p>
+                           @Model.Skills.StatisticaInfo
+                        </p>
+                    </div>
+
+
+
+                    <div class="card col-sm-12 ">
+
+                        <div class="row no-gutters">
+                            <div class="rating-progress-bars p-3">
+
+                                <div class="progress-1 align-items-center">
+                                    <span>HTML</span>
+                                    <div class="progress">
+
+                                        <div class="progress-bar bg-danger" role="progressbar"
+                                             style="width: 100%;" aria-valuenow="70" aria-valuemin="0"
+                                             aria-valuemax="100">
+                                           @layoutservis.GetDataStatis().Result.FirstOrDefault(s=>s.Key=="HTML").Value
+                                        </div>
+                                    </div>
+                                    <span>CSS</span>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" role="progressbar"
+                                             style="width: 90%;" aria-valuenow="25" aria-valuemin="0"
+                                             aria-valuemax="100">
+                                           @layoutservis.GetDataStatis().Result.FirstOrDefault(s=>s.Key=="CSS").Value
+                                        </div>
+                                    </div>
+                                    <span>JavaScript</span>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" role="progressbar"
+                                             style="width: 75%;" aria-valuenow="25" aria-valuemin="0"
+                                             aria-valuemax="100">
+                                           @layoutservis.GetDataStatis().Result.FirstOrDefault(s=>s.Key=="JavaScript").Value
+                                        </div>
+
+                                    </div>
+                                    <span>PhotoShop</span>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" role="progressbar"
+                                             style="width: 55%;" aria-valuenow="25" aria-valuemin="0"
+                                             aria-valuemax="100">
+                                         @layoutservis.GetDataStatis().Result.FirstOrDefault(s=>s.Key=="PhotoShop").Value
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+</main>
+
