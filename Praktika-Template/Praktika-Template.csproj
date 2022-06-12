@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\EternaAdmin\Data\" />
+    <Folder Include="Areas\EternaAdmin\Models\" />
     <Folder Include="Data\" />
   </ItemGroup>
 

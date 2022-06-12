@@ -16,6 +16,16 @@ namespace Praktika_Template.DAL
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<Statistica> Statics { get; set; }
+        public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Card> Cards { get; set; }
+        public DbSet<About> Abouts { get; set; }
+        public DbSet<AboutInfo> AboutInfos { get; set; }
+        public DbSet<HomeCard> HomeCards { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<ClientImage> ClientImages { get; set; }
+
+
+
 
     }
 }

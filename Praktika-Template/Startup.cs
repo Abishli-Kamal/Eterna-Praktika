@@ -48,8 +48,13 @@ namespace Praktika_Template
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name: "areas",
+                      pattern: "{area:exists}/{controller=dashbroad}/{action=index}/{id?}"
+                      );
+
+                endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=services}/{action=Index}/{id?}");
+                    pattern: "{controller=home}/{action=home}/{id?}");
             });
         }
     }

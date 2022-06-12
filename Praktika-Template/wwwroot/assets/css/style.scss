@@ -210,6 +210,9 @@
 #navbarsection {
   background-color: black;
   .navbarfooter {
+    ul {
+      padding-left: 0;
+    }
     .icons {
       li {
         background-color: rgb(73, 71, 71);
@@ -223,12 +226,11 @@
     }
     h5 {
       color: white;
-      margin-left: 8%;
+
       margin-top: 4%;
     }
     p {
       color: white;
-      margin-left: 10%;
     }
     li {
       list-style: none;
@@ -278,5 +280,118 @@
   }
   .topnav {
     display: none !important;
+  }
+}
+
+#slider {
+  .carousel-inner {
+    position: relative;
+    .info {
+      position: absolute;
+      bottom: 30%;
+
+      button {
+        width: 15%;
+        margin: 20px;
+        background-color: rgb(243, 26, 26);
+        &:hover {
+          background-color: white;
+          color: black;
+          transition: 0.5s;
+        }
+      }
+    }
+
+    .carousel-item {
+      height: 60vh;
+      width: 100%;
+    }
+    h2 {
+      color: black;
+      font-weight: bold;
+      font-size: 60px;
+      margin: 15px;
+    }
+    p {
+      color: rgb(68, 68, 68);
+      font-size: 18px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .carousel-inner {
+    h2 {
+      font-size: 20px;
+    }
+    font-size: 8px;
+  }
+  button {
+    background-color: blue;
+  }
+}
+#card-one {
+  margin-top: 3%;
+  .box {
+    height: 30vh;
+    &:hover {
+      background-color: #e96b56;
+      transition: 1s;
+      color: white;
+    }
+    .icon {
+      i {
+        font-size: 30px;
+        color: red;
+      }
+      padding: 10px;
+    }
+  }
+}
+#about {
+  margin-top: 4%;
+  .img {
+    img {
+      width: 100%;
+    }
+  }
+  .description {
+    h4 {
+      color: rgb(105, 104, 104);
+    }
+
+    .icon {
+      i {
+        font-size: 20px !important;
+      }
+    }
+  }
+}
+
+#client {
+  margin-top: 4%;
+  .name {
+
+    text-align: center;
+    h3 {
+      font-size: 35px;
+      font-weight: bold;
+      color: rgb(68, 68, 68);
+    }
+    hr {
+      width: 60px;
+      height: 4px;
+      color: rgb(243, 8, 8);
+      
+    }
+  }
+  .info{
+    text-align: center;
+  }
+}
+#clients{
+  .item{
+    img{
+      width: 60%;
+    }
   }
 }

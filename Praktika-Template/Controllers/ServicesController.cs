@@ -23,7 +23,8 @@ namespace Praktika_Template.Controllers
                 Carts = await _context.Carts.ToListAsync(),
                 Contacts = await _context.Contacts.ToListAsync(),
                 Skills = await _context.Skills.FirstOrDefaultAsync(),
-                Statisticas=await _context.Statics.ToListAsync()
+                Statisticas=await _context.Statics.ToListAsync(),
+              
 
             };
             return View(model);

@@ -226,6 +226,10 @@
   background-color: black;
 }
 
+#navbarsection .navbarfooter ul {
+  padding-left: 0;
+}
+
 #navbarsection .navbarfooter .icons li {
   background-color: #494747;
   border-radius: 50%;
@@ -239,13 +243,11 @@
 
 #navbarsection .navbarfooter h5 {
   color: white;
-  margin-left: 8%;
   margin-top: 4%;
 }
 
 #navbarsection .navbarfooter p {
   color: white;
-  margin-left: 10%;
 }
 
 #navbarsection .navbarfooter li {
@@ -298,5 +300,124 @@
   .topnav {
     display: none !important;
   }
+}
+
+#slider .carousel-inner {
+  position: relative;
+}
+
+#slider .carousel-inner .info {
+  position: absolute;
+  bottom: 30%;
+}
+
+#slider .carousel-inner .info button {
+  width: 15%;
+  margin: 20px;
+  background-color: #f31a1a;
+}
+
+#slider .carousel-inner .info button:hover {
+  background-color: white;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#slider .carousel-inner .carousel-item {
+  height: 60vh;
+  width: 100%;
+}
+
+#slider .carousel-inner h2 {
+  color: black;
+  font-weight: bold;
+  font-size: 60px;
+  margin: 15px;
+}
+
+#slider .carousel-inner p {
+  color: #444444;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel-inner {
+    font-size: 8px;
+  }
+  .carousel-inner h2 {
+    font-size: 20px;
+  }
+  button {
+    background-color: blue;
+  }
+}
+
+#card-one {
+  margin-top: 3%;
+}
+
+#card-one .box {
+  height: 30vh;
+}
+
+#card-one .box:hover {
+  background-color: #e96b56;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+}
+
+#card-one .box .icon {
+  padding: 10px;
+}
+
+#card-one .box .icon i {
+  font-size: 30px;
+  color: red;
+}
+
+#about {
+  margin-top: 4%;
+}
+
+#about .img img {
+  width: 100%;
+}
+
+#about .description h4 {
+  color: #696868;
+}
+
+#about .description .icon i {
+  font-size: 20px !important;
+}
+
+#client {
+  margin-top: 4%;
+}
+
+#client .name {
+  text-align: center;
+}
+
+#client .name h3 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #444444;
+}
+
+#client .name hr {
+  width: 60px;
+  height: 4px;
+  color: #f30808;
+}
+
+#client .info {
+  text-align: center;
+}
+
+#clients .item img {
+  width: 60%;
 }
 /*# sourceMappingURL=style.css.map */
