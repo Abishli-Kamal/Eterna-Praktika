@@ -1,0 +1,48 @@
+﻿@model RegisterVM
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1 class="mx-5">Register</h1>
+<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+<div class="container">
+    <form method="post">
+    <div class="mb-3">
+        <label for="firstname" class="form-label">FirstName</label>
+        <input asp-for="Firstname" class="form-control w-50" id="firstname">
+        <span class="text-danger"  asp-validation-for="Firstname"></span>
+    </div>
+    <div class="mb-3">
+        <label for="last" class="form-label">Lastname</label>
+        <input asp-for="Lastname" class="form-control w-50" id="last">
+        <span class="text-danger" asp-validation-for="Lastname"></span>
+    </div>
+    <div class="mb-3">
+        <label for="last" class="form-label">Username</label>
+        <input asp-for="Username" class="form-control w-50" id="last">
+        <span class="text-danger" asp-validation-for="Username"></span>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input asp-for="Email" class="form-control w-50" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div>
+   <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">  Password</label>
+        <input asp-for="Password" class="form-control w-50" id="exampleInputPassword1">
+        <span class="text-danger" asp-validation-for="Password"></span>
+    </div>
+     <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"> Confirm Password</label>
+        <input asp-for="ConfirmPassword" class="form-control w-50" id="exampleInputPassword1">
+        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+    </div>
+    <div class="mb-3 form-check">
+        <input  asp-for="IHaveReadIAccept" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <span class="text-danger" asp-validation-for="IHaveReadIAccept"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>

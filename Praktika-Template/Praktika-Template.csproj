@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20220613080135_CreatedTableAppUser.cs" />
+    <Compile Remove="Migrations\20220613080135_CreatedTableAppUser.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Areas\EternaAdmin\Data\" />
     <Folder Include="Areas\EternaAdmin\Models\" />
     <Folder Include="Data\" />

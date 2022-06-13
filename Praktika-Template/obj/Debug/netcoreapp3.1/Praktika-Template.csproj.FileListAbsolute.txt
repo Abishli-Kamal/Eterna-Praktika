@@ -159,3 +159,10 @@ C:\Users\user\Desktop\Praktika-Template\Praktika-Template\obj\Debug\netcoreapp3.
 C:\Users\user\Desktop\Praktika-Template\Praktika-Template\obj\Debug\netcoreapp3.1\Razor\Areas\EternaAdmin\Views\Slider\Create.cshtml.g.cs
 C:\Users\user\Desktop\Praktika-Template\Praktika-Template\obj\Debug\netcoreapp3.1\Razor\Areas\EternaAdmin\Views\Slider\Edit.cshtml.g.cs
 C:\Users\user\Desktop\Praktika-Template\Praktika-Template\obj\Debug\netcoreapp3.1\Razor\Areas\EternaAdmin\Views\Slider\Delete.cshtml.g.cs
+C:\Users\user\Desktop\Praktika-Template\Praktika-Template\obj\Debug\netcoreapp3.1\Razor\Areas\EternaAdmin\Views\Card\Index.cshtml.g.cs
+C:\Users\user\Desktop\Praktika-Template\Praktika-Template\obj\Debug\netcoreapp3.1\Razor\Areas\EternaAdmin\Views\Card\Create.cshtml.g.cs
+C:\Users\user\Desktop\Praktika-Template\Praktika-Template\obj\Debug\netcoreapp3.1\Razor\Areas\EternaAdmin\Views\Card\Detail.cshtml.g.cs
+C:\Users\user\Desktop\Praktika-Template\Praktika-Template\obj\Debug\netcoreapp3.1\Razor\Areas\EternaAdmin\Views\Card\Edit.cshtml.g.cs
+C:\Users\user\Desktop\Praktika-Template\Praktika-Template\obj\Debug\netcoreapp3.1\Razor\Areas\EternaAdmin\Views\Card\Delete.cshtml.g.cs
+C:\Users\user\Desktop\Praktika-Template\Praktika-Template\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\user\Desktop\Praktika-Template\Praktika-Template\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs

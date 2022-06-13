@@ -4,7 +4,7 @@ using Praktika_Template.Models;
 
 namespace Praktika_Template.DAL
 {
-    public class AppDbContext : IdentityDbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)

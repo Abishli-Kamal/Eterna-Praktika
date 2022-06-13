@@ -1,0 +1,25 @@
+﻿@model Card
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<form class="mt-5 mx-5" method ="post">
+  <div class="mb-3">
+    <label for="title" class="form-label ">Card Title</label>
+    <input asp-for="Title" class="form-control border border-info" id="title" aria-describedby="emailHelp">
+   <span asp-validation-for="Title" class="text-danger"></span>
+  </div>
+   <div class="mb-3">
+    <label for="title" class="form-label ">Card Description</label>
+    <input asp-for="Description" class="form-control border border-info " id="title" aria-describedby="emailHelp">
+   <span asp-validation-for="Description" class="text-danger"></span>
+  </div>
+   <div class="mb-3">
+    <label for="title" class="form-label ">Card Icon</label>
+    <input asp-for="Icon" class="form-control border border-info" id="title" aria-describedby="emailHelp">
+   <span asp-validation-for="Icon" class="text-danger  "></span>
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
