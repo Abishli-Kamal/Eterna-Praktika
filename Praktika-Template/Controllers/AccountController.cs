@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Praktika_Template.Extention;
 using Praktika_Template.Models;
 using Praktika_Template.ViewModels;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Praktika_Template.Controllers
@@ -39,7 +42,7 @@ namespace Praktika_Template.Controllers
                 Email = register.Email,
                 UserName = register.Username
             };
-          
+
             if (register.IHaveReadIAccept == true)
             {
                 IdentityResult result = await _userManager.CreateAsync(user, register.Password);
@@ -72,13 +75,58 @@ namespace Praktika_Template.Controllers
         [HttpPost]
         [AutoValidateAntiforgeryToken]
 
-        //public async Task<IActionResult> Login( LoginVM login)
-        //{
-        //    if(!ModelState.IsValid) return View();  
+        public async Task<IActionResult> Login(LoginVM login)
+        {
+            AppUser user = await _userManager.FindByNameAsync(login.Username);
+            if (user == null) return View();
 
+            IList<string> roles = await _userManager.GetRolesAsync(user);
+            string role = roles.FirstOrDefault(r => r == Role.User.ToString());
+            if (role == null)
+            {
+                ModelState.AddModelError("", "Please contact with admins");
+                return View();
+            }
+            else
+            {
+                if (login.RememberMe)
+                {
+                    Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, login.Password, true, true);
+                    if (!result.Succeeded)
+                    {
+                        if (result.IsLockedOut)
+                        {
+                            ModelState.AddModelError("", "You have been dismissed for 5 minutes");
+                            return View();
+                        }
 
-        //}
+                        ModelState.AddModelError("", "Username or Password is incorrect");
+                        return View();
+                    }
 
+                }
+                else
+                {
+                    Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, login.Password, false, true);
+                    if (!result.Succeeded)
+                    {
+                        if (result.IsLockedOut)
+                        {
+                            ModelState.AddModelError("", "You have been dismissed for 5 minutes");
+                            return View();
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Username or Password is incorrect");
+                            return View();
+                        }
+
+                    }
+                  
+                }
+                return RedirectToAction(nameof(Register));
+            }
+        }
         public async Task CreateRoles()
         {
             await _roleManager.CreateAsync(new IdentityRole { Name = Role.User.ToString() });
@@ -87,3 +135,4 @@ namespace Praktika_Template.Controllers
         }
     }
 }
+
