@@ -67,11 +67,46 @@ namespace Praktika_Template.Controllers
 
 
         }
-        public async Task<IActionResult> Login()
+        public IActionResult Login()
         {
             return View();
         }
 
+
+        //[HttpPost]
+        //[AutoValidateAntiforgeryToken]
+
+        //public async Task<IActionResult> Login(LoginVM login)
+        //{
+        //    AppUser user = await _userManager.FindByNameAsync(login.Username);
+        //    if (user == null) return View();
+        //    IList<string> roles = await _userManager.GetRolesAsync(user);
+        //    string role = roles.FirstOrDefault(r => r == Role.User.ToString());
+        //    if (role == null)
+        //    {
+        //        ModelState.AddModelError("", "Plase contact with admins");
+        //        return View();
+        //    }
+        //    if (login.RememberMe)
+        //    {
+        //        Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, login.Password, true, true);
+        //        if (!result.Succeeded)
+        //        {
+        //            if (result.IsLockedOut)
+        //            {
+        //                ModelState.AddModelError("", "You have been dismissed for 5 minutes");
+        //                return View();
+        //            }
+        //            else
+        //            {
+        //                ModelState.AddModelError("", "Username or Password is incorrect");
+        //                return View();
+        //            }
+        //        }
+        //    }
+        //    return RedirectToAction("Home", "Home");
+
+        //}
         [HttpPost]
         [AutoValidateAntiforgeryToken]
 
@@ -79,53 +114,55 @@ namespace Praktika_Template.Controllers
         {
             AppUser user = await _userManager.FindByNameAsync(login.Username);
             if (user == null) return View();
-
-            IList<string> roles = await _userManager.GetRolesAsync(user);
+            IList <string> roles= await _userManager.GetRolesAsync(user);
+           
             string role = roles.FirstOrDefault(r => r == Role.User.ToString());
             if (role == null)
             {
-                ModelState.AddModelError("", "Please contact with admins");
+                ModelState.AddModelError("", "Plase contact with admins");
                 return View();
             }
-            else
+            if (login.RememberMe)
             {
-                if (login.RememberMe)
-                {
-                    Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, login.Password, true, true);
-                    if (!result.Succeeded)
-                    {
-                        if (result.IsLockedOut)
-                        {
-                            ModelState.AddModelError("", "You have been dismissed for 5 minutes");
-                            return View();
-                        }
+                Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, login.Password, true, true);
+                if (!result.Succeeded)
 
+                {
+                    if (result.IsLockedOut)
+                    {
+                        ModelState.AddModelError("", "You have been dismissed for 5 minutes");
+                        return View();
+                    }
+                    else
+                    {
                         ModelState.AddModelError("", "Username or Password is incorrect");
                         return View();
                     }
 
                 }
-                else
-                {
-                    Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, login.Password, false, true);
-                    if (!result.Succeeded)
-                    {
-                        if (result.IsLockedOut)
-                        {
-                            ModelState.AddModelError("", "You have been dismissed for 5 minutes");
-                            return View();
-                        }
-                        else
-                        {
-                            ModelState.AddModelError("", "Username or Password is incorrect");
-                            return View();
-                        }
-
-                    }
-                  
-                }
-                return RedirectToAction(nameof(Register));
             }
+            else
+            {
+                Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, login.Password, true, false);
+                if (!result.Succeeded)
+
+                {
+                    if (result.IsLockedOut)
+                    {
+                        ModelState.AddModelError("", "You have been dismissed for 5 minutes");
+                        return View();
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Username or Password is incorrect");
+                        return View();
+                    }
+
+                }
+            }
+
+            
+            return RedirectToAction("Home", "Home");
         }
         public async Task CreateRoles()
         {
