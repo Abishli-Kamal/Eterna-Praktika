@@ -8630,11 +8630,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Praktika-Template\\Praktika-Template\\Praktika-Template.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\Projects_Back_End\\Praktika-Template\\Praktika-Template\\Praktika-Template.csproj",
       "projectName": "Praktika-Template",
-      "projectPath": "C:\\Users\\user\\Desktop\\Praktika-Template\\Praktika-Template\\Praktika-Template.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\Projects_Back_End\\Praktika-Template\\Praktika-Template\\Praktika-Template.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Praktika-Template\\Praktika-Template\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\Projects_Back_End\\Praktika-Template\\Praktika-Template\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8696,6 +8696,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.25, 3.1.25]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

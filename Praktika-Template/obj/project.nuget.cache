@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3mWee8s6KmHk/od8cxPTmgHUhtLSlbQmOMdlsqgtWXIIqjEvrVKKHv/Qum8hwuuPcIjwvzLHskqmFnuLoETDkA==",
+  "dgSpecHash": "6Dq2yD5JXGF0yAJ1Xpt+PiZX3omUHuFqqmIZ9v3IX4J4S7lW9QB6MTwL1Gk3B8mgRuxAWkOlWsT60ABT+t9oRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\Praktika-Template\\Praktika-Template\\Praktika-Template.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\Projects_Back_End\\Praktika-Template\\Praktika-Template\\Praktika-Template.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.25\\microsoft.aspnetcore.cryptography.internal.3.1.25.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.25\\microsoft.aspnetcore.cryptography.keyderivation.3.1.25.nupkg.sha512",
@@ -167,7 +167,8 @@
     "C:\\Users\\user\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
   ],
   "logs": []
 }
